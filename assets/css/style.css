@@ -6,28 +6,24 @@ body {
 }
 
 .firstDiv {
-
-}
-
-.secondDiv {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.thirdDiv {
+.secondDiv {
     display: flex;
     flex-direction: column;
     margin: auto;
     padding-top: 20px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     background-color: whitesmoke;
     width: 50%;
     border-radius: 10px;
-    margin-bottom: 50px;
 }
 
 .choiceBtn {
-    width: 15%;
+    width: 25%;
     margin-top: 20px;
-    margin-left: 20px;
+    margin: auto;
+    margin-top: 15px;
 }

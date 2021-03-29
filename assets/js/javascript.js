@@ -17,7 +17,7 @@ let quizQuestions = [
         answer: "[]",
     },
     {
-        question: "Which attribute is used to change font color in Javascript?",
+        question: "What element attribute is used to change font and background color in Javascript?",
         choice: ["style", "set", "assign", "change"],
         answer: "style",
     },
@@ -27,8 +27,16 @@ let quizQuestions = [
         answer: "&&",
     },
     {
-        question: "Which is the correct way to display myVariable in console?",
+        question: "Which is the correct way to display the variable myVariable in console?",
         choice: ["console.log(myVariable)", "console.show(myVariable)", "console.display(myVariable)", "console.write(myVariable)"],
         answer: "console.log(myVariable)",
     }
 ];
+
+function startTrivia() {
+
+}
+
+function startQuestions() {
+
+}
