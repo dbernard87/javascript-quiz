@@ -38,10 +38,14 @@ let quizQuestions = [
     }
 ];
 
-function startTrivia() {
-
-}
+startBtn.addEventListener("click", function() {
+    startBtn.style.display = "none";
+    choiceOne.style.display = "block";
+    choiceTwo.style.display = "block";
+    choiceThree.style.display = "block";
+    choiceFour.style.display = "block";
+});
 
 function startQuestions() {
 
-}
+};
