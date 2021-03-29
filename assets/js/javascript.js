@@ -3,19 +3,7 @@ let choiceOne = document.querySelector("#choiceOne");
 let choiceTwo = document.querySelector("#choiceTwo");
 let choiceThree = document.querySelector("#choiceThree");
 let choiceFour = document.querySelector("#choiceFour");
-
-startBtn.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceOne.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceTwo.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceThree.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceFour.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-
-choiceOne.style.display = "none";
-choiceTwo.style.display = "none";
-choiceThree.style.display = "none";
-choiceFour.style.display = "none";
-
-let quizQuestions = [
+let triviaQuestions = [
     {
         question: "Which pair of characters are used to create an array in Javascript?",
         choice: ["<>", "()", "[]", "''"],
@@ -37,6 +25,17 @@ let quizQuestions = [
         answer: "console.log(myVariable)",
     }
 ];
+
+startBtn.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceOne.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceTwo.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceThree.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceFour.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+
+choiceOne.style.display = "none";
+choiceTwo.style.display = "none";
+choiceThree.style.display = "none";
+choiceFour.style.display = "none";
 
 startBtn.addEventListener("click", function() {
     startBtn.style.display = "none";
