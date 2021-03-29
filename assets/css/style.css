@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.firstDiv {
+
+}
+
+.secondDiv {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.thirdDiv {
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    background-color: whitesmoke;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
