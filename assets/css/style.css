@@ -21,8 +21,8 @@ body {
     border-radius: 10px;
 }
 
-.choiceBtn {
-    width: 25%;
+.choiceBtn, .startBtn {
+    width: 33%;
     margin-top: 20px;
     margin: auto;
     margin-top: 15px;
