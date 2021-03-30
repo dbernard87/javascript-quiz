@@ -115,21 +115,25 @@ function questionFour() {
     choiceOne.textContent = "console.log(myVariable)";
     choiceOne.addEventListener("click", function() {
         resultText.textContent = "Correct";
+        timer = 0;
         return triviaScore();
     })
     choiceTwo.textContent = "console.show(myVariable)";
     choiceTwo.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 0;
         return triviaScore();
     })
     choiceThree.textContent = "console.display(myVariable)";
     choiceThree.addEventListener("click", function() {
         resultText.textContent = "Correct";
+        timer = 0;
         return triviaScore();
     })
     choiceFour.textContent = "console.write(myVariable)";
     choiceFour.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 0;
         return triviaScore();
     })
 };
