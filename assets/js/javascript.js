@@ -154,5 +154,13 @@ startBtn.addEventListener("click", function() {
     };
 
     function triviaScores() {
-
+        secondText.style.display = "none";
+        questionText.style.display = "none";
+        choiceOne.style.display = "none";
+        choiceTwo.style.display = "none";
+        choiceThree.style.display = "none";
+        choiceFour.style.display = "none";
+        resultText.style.display = "none";
     };
+
+    /* NOW FIGURE OUT HOW TO SUBTRACT FROM TIME ON WRONG ANSWER */
