@@ -25,19 +25,18 @@ startBtn.addEventListener("click", function() {
     choiceTwo.style.display = "block";
     choiceThree.style.display = "block";
     choiceFour.style.display = "block";
+    let downloadTimer = setInterval(function(){
+        if(timer <= 0){
+          clearInterval(downloadTimer);
+          document.getElementById("#timeLeft").innerHTML = "Finished";
+          return triviaScore();
+        } else {
+          document.getElementById("#timeLeft").innerHTML = timer + " seconds remaining";
+        }
+        timer -= 1;
+      }, 1000);
     return questionOne();
 });
-
-let downloadTimer = setInterval(function(){
-  if(timer <= 0){
-    clearInterval(downloadTimer);
-    document.getElementById("#timeLeft").innerHTML = "Finished";
-    return triviaScore();
-  } else {
-    document.getElementById("#timeLeft").innerHTML = timer + " seconds remaining";
-  }
-  timer -= 1;
-}, 1000);
 
 function questionOne() {
     questionText.textContent = "Which pair of characters are used to create an array in Javascript?";
