@@ -6,7 +6,7 @@ let choiceFour = document.querySelector("#choiceFour");
 let questionText = document.querySelector("#questionText");
 let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
-let timer = 10;
+let timer = 20;
 
 startBtn.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 choiceOne.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
@@ -43,22 +43,25 @@ function questionOne() {
     choiceOne.textContent = "< >";
     choiceOne.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 15;
         return questionTwo();
     })
     choiceTwo.textContent = "( )";
     choiceTwo.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 15;
         return questionTwo();
     })
     choiceThree.textContent = "[ ]";
     choiceThree.addEventListener("click", function() {
         resultText.textContent = "Correct";
-        timer = 10;
+        timer = 20;
         return questionTwo();
     })
     choiceFour.textContent = '" "';
     choiceFour.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 15;
         return questionTwo();
     })
 };
@@ -68,22 +71,25 @@ function questionTwo() {
     choiceOne.textContent = "style";
     choiceOne.addEventListener("click", function() {
         resultText.textContent = "Correct";
-        timer = 10;
+        timer = 20;
         return questionThree();
     })
     choiceTwo.textContent = "set";
     choiceTwo.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 10;
         return questionThree();
     })
     choiceThree.textContent = "assign";
     choiceThree.addEventListener("click", function() {
         resultText.textContent = "Inorrect";
+        timer = 10;
         return questionThree();
     })
     choiceFour.textContent = "change";
     choiceFour.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 10;
         return questionThree();
     })
 };
@@ -93,22 +99,25 @@ function questionThree() {
     choiceOne.textContent = "!!";
     choiceOne.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 5;
         return questionFour();
     })
     choiceTwo.textContent = "||";
     choiceTwo.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 5;
         return questionFour();
     })
     choiceThree.textContent = "++";
     choiceThree.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 5;
         return questionFour();
     })
     choiceFour.textContent = "&&";
     choiceFour.addEventListener("click", function() {
         resultText.textContent = "Correct";
-        timer = 10;
+        timer = 20;
         return questionFour();
     })
 };
@@ -123,21 +132,25 @@ function questionFour() {
     choiceTwo.textContent = "console.show(myVariable)";
     choiceTwo.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 0;
         return triviaScore();
     })
     choiceThree.textContent = "console.display(myVariable)";
     choiceThree.addEventListener("click", function() {
-        resultText.textContent = "Correct";
+        resultText.textContent = "Incorrect";
+        timer = 0;
         return triviaScore();
     })
     choiceFour.textContent = "console.write(myVariable)";
     choiceFour.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
+        timer = 0;
         return triviaScore();
     })
 };
 
 function triviaScore() {
+    timer.style.display = "none";
     secondText.style.display = "none";
     questionText.style.display = "none";
     choiceOne.style.display = "none";
