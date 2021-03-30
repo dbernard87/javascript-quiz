@@ -7,6 +7,28 @@ let questionText = document.querySelector("#questionText");
 let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
 let timer = 20;
+let quizQuestions = [
+    {
+        question: "Which pair of characters are used to create an array in Javascript?",
+        choice: ["<>", "()", "[]", "''"],
+        answer: "[]",
+    },
+    {
+        question: "Which attribute is used to change font color in Javascript?",
+        choice: ["style", "set", "assign", "change"],
+        answer: "style",
+    },
+    {
+        question: "Which set of characters are used to assign AND to an if else statement?",
+        choice: ["!!", "||", "++", "&&"],
+        answer: "&&",
+    },
+    {
+        question: "Which is the correct way to display myVariable in console?",
+        choice: ["console.log(myVariable)", "console.show(myVariable)", "console.display(myVariable)", "console.write(myVariable)"],
+        answer: "console.log(myVariable)",
+    }
+]; 
 
 startBtn.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 choiceOne.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
@@ -37,113 +59,3 @@ startBtn.addEventListener("click", function() {
       }, 1000);
     return questionOne();
 });
-
-function questionOne() {
-    questionText.textContent = "Which pair of characters are used to create an array in Javascript?";
-    choiceOne.textContent = "< >";
-    choiceOne.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionTwo();
-    })
-    choiceTwo.textContent = "( )";
-    choiceTwo.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionTwo();
-    })
-    choiceThree.textContent = "[ ]";
-    choiceThree.addEventListener("click", function() {
-        resultText.textContent = "Correct";
-        return questionTwo();
-    })
-    choiceFour.textContent = '" "';
-    choiceFour.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionTwo();
-    })
-};
-
-function questionTwo() {
-    questionText.textContent = "What element attribute is used to change font and background color in Javascript?";
-    choiceOne.textContent = "style";
-    choiceOne.addEventListener("click", function() {
-        resultText.textContent = "Correct";
-        return questionThree();
-    })
-    choiceTwo.textContent = "set";
-    choiceTwo.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionThree();
-    })
-    choiceThree.textContent = "assign";
-    choiceThree.addEventListener("click", function() {
-        resultText.textContent = "Inorrect";
-        return questionThree();
-    })
-    choiceFour.textContent = "change";
-    choiceFour.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionThree();
-    })
-};
-
-function questionThree() {
-    questionText.textContent = "Which set of characters are used to assign AND to an if else statement?";
-    choiceOne.textContent = "!!";
-    choiceOne.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionFour();
-    })
-    choiceTwo.textContent = "||";
-    choiceTwo.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionFour();
-    })
-    choiceThree.textContent = "++";
-    choiceThree.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        return questionFour();
-    })
-    choiceFour.textContent = "&&";
-    choiceFour.addEventListener("click", function() {
-        resultText.textContent = "Correct";
-        return questionFour();
-    })
-};
-
-function questionFour() {
-    questionText.textContent = "Which is the correct way to display the variable myVariable in console?";
-    choiceOne.textContent = "console.log(myVariable)";
-    choiceOne.addEventListener("click", function() {
-        resultText.textContent = "Correct";
-        timer = 0;
-        return triviaScore();
-    })
-    choiceTwo.textContent = "console.show(myVariable)";
-    choiceTwo.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        timer = 0;
-        return triviaScore();
-    })
-    choiceThree.textContent = "console.display(myVariable)";
-    choiceThree.addEventListener("click", function() {
-        resultText.textContent = "Correct";
-        timer = 0;
-        return triviaScore();
-    })
-    choiceFour.textContent = "console.write(myVariable)";
-    choiceFour.addEventListener("click", function() {
-        resultText.textContent = "Incorrect";
-        timer = 0;
-        return triviaScore();
-    })
-};
-
-function triviaScore() {
-    secondText.style.display = "none";
-    questionText.style.display = "none";
-    choiceOne.style.display = "none";
-    choiceTwo.style.display = "none";
-    choiceThree.style.display = "none";
-    choiceFour.style.display = "none";
-    resultText.style.display = "none";
-};
