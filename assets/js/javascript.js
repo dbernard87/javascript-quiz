@@ -6,7 +6,7 @@ let choiceFour = document.querySelector("#choiceFour");
 let questionText = document.querySelector("#questionText");
 let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
-let timer = 20;
+let timer = 10;
 
 startBtn.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 choiceOne.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
@@ -25,9 +25,9 @@ startBtn.addEventListener("click", function() {
     choiceTwo.style.display = "block";
     choiceThree.style.display = "block";
     choiceFour.style.display = "block";
-    let downloadTimer = setInterval(function(){
+    let triviaTimer = setInterval(function(){
         if(timer <= 0){
-          clearInterval(downloadTimer);
+          clearInterval(triviaTimer);
           document.getElementById("#timeLeft").innerHTML = "Finished";
           return triviaScore();
         } else {
@@ -53,6 +53,7 @@ function questionOne() {
     choiceThree.textContent = "[ ]";
     choiceThree.addEventListener("click", function() {
         resultText.textContent = "Correct";
+        timer = 10;
         return questionTwo();
     })
     choiceFour.textContent = '" "';
@@ -67,6 +68,7 @@ function questionTwo() {
     choiceOne.textContent = "style";
     choiceOne.addEventListener("click", function() {
         resultText.textContent = "Correct";
+        timer = 10;
         return questionThree();
     })
     choiceTwo.textContent = "set";
@@ -106,6 +108,7 @@ function questionThree() {
     choiceFour.textContent = "&&";
     choiceFour.addEventListener("click", function() {
         resultText.textContent = "Correct";
+        timer = 10;
         return questionFour();
     })
 };
@@ -130,7 +133,6 @@ function questionFour() {
     choiceFour.textContent = "console.write(myVariable)";
     choiceFour.addEventListener("click", function() {
         resultText.textContent = "Incorrect";
-        timer + 10;
         return triviaScore();
     })
 };
