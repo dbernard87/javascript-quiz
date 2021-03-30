@@ -69,10 +69,12 @@ startBtn.addEventListener("click", function() {
         choiceFour.textContent = triviaChoice[0].choice[3];
         choiceOne.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionTwo();
         })
         choiceTwo.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionTwo();
         })
         choiceThree.addEventListener("click", function() {
@@ -81,6 +83,7 @@ startBtn.addEventListener("click", function() {
         })
         choiceFour.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionTwo();
         })
     };
@@ -97,14 +100,17 @@ startBtn.addEventListener("click", function() {
         })
         choiceTwo.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionThree();
         })
         choiceThree.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionThree();
         })
         choiceFour.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionThree();
         })
     };
@@ -117,14 +123,17 @@ startBtn.addEventListener("click", function() {
         choiceFour.textContent = triviaChoice[2].choice[3]; 
         choiceOne.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionFour();
         })
         choiceTwo.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionFour();
         })
         choiceThree.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return questionFour();
         })
         choiceFour.addEventListener("click", function() {
@@ -140,15 +149,22 @@ startBtn.addEventListener("click", function() {
         choiceThree.textContent = triviaChoice[3].choice[2];
         choiceFour.textContent = triviaChoice[3].choice[3]; 
         choiceOne.addEventListener("click", function() {
+            resultText.textContent = "Correct Answer";
             return triviaScores();
         })
         choiceTwo.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return triviaScores();
         })
         choiceThree.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return triviaScores();
         })
         choiceFour.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            timer -= 5;
             return triviaScores();
         })
     };
