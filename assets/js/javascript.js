@@ -7,10 +7,10 @@ let questionText = document.querySelector("#questionText");
 let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
 let timer = 20;
-let quizQuestions = [
+let triviaChoice = [
     {
         question: "Which pair of characters are used to create an array in Javascript?",
-        choice: ["<>", "()", "[]", "''"],
+        choice: ["< >", "( )", "[ ]", "' '"],
         answer: "[]",
     },
     {
@@ -57,5 +57,13 @@ startBtn.addEventListener("click", function() {
         }
         timer -= 1;
       }, 1000);
-    return questionOne();
+    return triviaQuestions();
 });
+
+function triviaQuestions() {
+    questionText.textContent = triviaChoice[0].question;
+    choiceOne.textContent = triviaChoice[0].choice[0];
+    choiceTwo.textContent = triviaChoice[0].choice[1];
+    choiceThree.textContent = triviaChoice[0].choice[2];
+    choiceFour.textContent = triviaChoice[0].choice[3];
+}
