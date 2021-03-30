@@ -32,6 +32,7 @@ let downloadTimer = setInterval(function(){
   if(timer <= 0){
     clearInterval(downloadTimer);
     document.getElementById("#timeLeft").innerHTML = "Finished";
+    return triviaScore();
   } else {
     document.getElementById("#timeLeft").innerHTML = timer + " seconds remaining";
   }
