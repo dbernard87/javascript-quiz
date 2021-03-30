@@ -37,6 +37,7 @@ choiceTwo.setAttribute("style", "padding: 10px 20px; color:blue; background-colo
 choiceThree.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 choiceFour.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 
+secondText.style.display = "none";
 choiceOne.style.display = "none";
 choiceTwo.style.display = "none";
 choiceThree.style.display = "none";
@@ -179,4 +180,4 @@ startBtn.addEventListener("click", function() {
         resultText.style.display = "none";
     };
 
-    /* NOW FIGURE OUT HOW TO SUBTRACT FROM TIME ON WRONG ANSWER */
+/* NOW FIGURE OUT HOW TO STOP TIMER AND SAVE TIME LEFT AS THE USERS SCORE */
