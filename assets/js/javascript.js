@@ -6,7 +6,8 @@ let choiceFour = document.querySelector("#choiceFour");
 let questionText = document.querySelector("#questionText");
 let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
-let timer = 20;
+let timer = 30;
+let score = 0;
 let triviaChoice = [
     {
         question: "Which pair of characters are used to create an array in Javascript?",
@@ -57,13 +58,101 @@ startBtn.addEventListener("click", function() {
         }
         timer -= 1;
       }, 1000);
-    return triviaQuestions();
+    return questionOne();
 });
 
-function triviaQuestions() {
-    questionText.textContent = triviaChoice[0].question;
-    choiceOne.textContent = triviaChoice[0].choice[0];
-    choiceTwo.textContent = triviaChoice[0].choice[1];
-    choiceThree.textContent = triviaChoice[0].choice[2];
-    choiceFour.textContent = triviaChoice[0].choice[3];
-}
+    function questionOne() {
+        questionText.textContent = triviaChoice[0].question;
+        choiceOne.textContent = triviaChoice[0].choice[0];
+        choiceTwo.textContent = triviaChoice[0].choice[1];
+        choiceThree.textContent = triviaChoice[0].choice[2];
+        choiceFour.textContent = triviaChoice[0].choice[3];
+        choiceOne.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionTwo();
+        })
+        choiceTwo.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionTwo();
+        })
+        choiceThree.addEventListener("click", function() {
+            resultText.textContent = "Correct Answer";
+            return questionTwo();
+        })
+        choiceFour.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionTwo();
+        })
+    };
+
+    function questionTwo() {
+        questionText.textContent = triviaChoice[1].question;
+        choiceOne.textContent = triviaChoice[1].choice[0];
+        choiceTwo.textContent = triviaChoice[1].choice[1];
+        choiceThree.textContent = triviaChoice[1].choice[2];
+        choiceFour.textContent = triviaChoice[1].choice[3]; 
+        choiceOne.addEventListener("click", function() {
+            resultText.textContent = "Correct Answer";
+            return questionThree();
+        })
+        choiceTwo.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionThree();
+        })
+        choiceThree.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionThree();
+        })
+        choiceFour.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionThree();
+        })
+    };
+
+    function questionThree() {
+        questionText.textContent = triviaChoice[2].question;
+        choiceOne.textContent = triviaChoice[2].choice[0];
+        choiceTwo.textContent = triviaChoice[2].choice[1];
+        choiceThree.textContent = triviaChoice[2].choice[2];
+        choiceFour.textContent = triviaChoice[2].choice[3]; 
+        choiceOne.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionFour();
+        })
+        choiceTwo.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionFour();
+        })
+        choiceThree.addEventListener("click", function() {
+            resultText.textContent = "Incorrect Answer";
+            return questionFour();
+        })
+        choiceFour.addEventListener("click", function() {
+            resultText.textContent = "Correct Answer";
+            return questionFour();
+        })
+    };
+
+    function questionFour() {
+        questionText.textContent = triviaChoice[3].question;
+        choiceOne.textContent = triviaChoice[3].choice[0];
+        choiceTwo.textContent = triviaChoice[3].choice[1];
+        choiceThree.textContent = triviaChoice[3].choice[2];
+        choiceFour.textContent = triviaChoice[3].choice[3]; 
+        choiceOne.addEventListener("click", function() {
+            return triviaScores();
+        })
+        choiceTwo.addEventListener("click", function() {
+            return triviaScores();
+        })
+        choiceThree.addEventListener("click", function() {
+            return triviaScores();
+        })
+        choiceFour.addEventListener("click", function() {
+            return triviaScores();
+        })
+    };
+
+    function triviaScores() {
+
+    };
