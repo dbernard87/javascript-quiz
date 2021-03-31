@@ -21,6 +21,8 @@ let secondText = document.querySelector("#secondText");
 let yourScore = document.querySelector("#yourScore");
 let timeLeft = document.querySelector("#timeLeft");
 let scoreName = document.querySelector("#scoreName")
+let scoreListSaved = document.querySelector("#scoreList")
+let playersText = document.querySelector("#playersText")
 let timer = 30;
 let triviaChoice = [
     {
@@ -83,16 +85,17 @@ choiceSixteen.style.display = "none";
 yourScore.style.display = "none";
 timeLeft.style.display = "none";
 scoreName.style.display = "none";
+scoreListSaved.style.display = "none";
+playersText.style.display = "none";
 
 startBtn.addEventListener("click", function() {
     startBtn.style.display = "none";
     let triviaTimer = setInterval(function(){
         if(timer <= 0){
           clearInterval(triviaTimer);
-          document.getElementById("timeLeft").innerHTML = "Finished";
-          return triviaScore();
+          document.getElementById("timeLeft").textContent = "Times Up! You will receive negative points!";
         } else {
-          document.getElementById("timeLeft").innerHTML = timer + " seconds remaining";
+          document.getElementById("timeLeft").textContent = timer + " seconds remaining";
         }
         timer -= 1;
       }, 1000);
@@ -250,6 +253,8 @@ function triviaScores() {
     timeLeft.style.display = "none";
     yourScore.style.display = "block";
     scoreName.style.display = "block";
+    scoreListSaved.style.display = "block";
+    playersText.style.display = "block";
     questionText.textContent = ('Your Score: '+timer+'');
     };
 
@@ -260,9 +265,8 @@ var scoreCountSpan = document.querySelector("#scoreCount");
 var scores = [];
 
 function renderScores() {
-  scoreList.innerHTML = "";
+  scoreList.textContent = "";
   scoreCountSpan.textContent = scores.length;
-
   for (var i = 0; i < scores.length; i++) {
     var score = scores[i];
 
@@ -293,7 +297,6 @@ function storeScores() {
 scoreForm.addEventListener("submit", function(event) {
   event.preventDefault();
   var scoreText = scoreInput.value.trim();
-
   if (scoreText === "") {
     return;
   }
@@ -306,7 +309,6 @@ scoreForm.addEventListener("submit", function(event) {
 
 scoreList.addEventListener("click", function(event) {
   var element = event.target;
-
   if (element.matches("button") === true) {
     var index = element.parentElement.getAttribute("data-index");
     scores.splice(index, 1);
