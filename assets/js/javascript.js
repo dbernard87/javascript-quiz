@@ -3,6 +3,18 @@ let choiceOne = document.querySelector("#choiceOne");
 let choiceTwo = document.querySelector("#choiceTwo");
 let choiceThree = document.querySelector("#choiceThree");
 let choiceFour = document.querySelector("#choiceFour");
+let choiceFive = document.querySelector("#choiceFive");
+let choiceSix = document.querySelector("#choiceSix");
+let choiceSeven = document.querySelector("#choiceSeven");
+let choiceEight = document.querySelector("#choiceEight");
+let choiceNine = document.querySelector("#choiceNine");
+let choiceTen = document.querySelector("#choiceTen");
+let choiceEleven = document.querySelector("#choiceEleven");
+let choiceTwelve = document.querySelector("#choiceTwelve");
+let choiceThirteen = document.querySelector("#choiceThirteen");
+let choiceFourteen = document.querySelector("#choiceFourteen");
+let choiceFifteen = document.querySelector("#choiceFifteen");
+let choiceSixteen = document.querySelector("#choiceSixteen");
 let questionText = document.querySelector("#questionText");
 let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
@@ -36,19 +48,41 @@ choiceOne.setAttribute("style", "padding: 10px 20px; color:blue; background-colo
 choiceTwo.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 choiceThree.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 choiceFour.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceFive.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceSix.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceSeven.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceEight.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceNine.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceTen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceEleven.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceTwelve.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceThirteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceFourteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceFifteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
+choiceSixteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 
 secondText.style.display = "none";
 choiceOne.style.display = "none";
 choiceTwo.style.display = "none";
 choiceThree.style.display = "none";
 choiceFour.style.display = "none";
+choiceFive.style.display = "none";
+choiceSix.style.display = "none";
+choiceSeven.style.display = "none";
+choiceEight.style.display = "none";
+choiceNine.style.display = "none";
+choiceTen.style.display = "none";
+choiceEleven.style.display = "none";
+choiceTwelve.style.display = "none";
+choiceThirteen.style.display = "none";
+choiceFourteen.style.display = "none";
+choiceFifteen.style.display = "none";
+choiceSixteen.style.display = "none";
+
+
 
 startBtn.addEventListener("click", function() {
     startBtn.style.display = "none";
-    choiceOne.style.display = "block";
-    choiceTwo.style.display = "block";
-    choiceThree.style.display = "block";
-    choiceFour.style.display = "block";
     let triviaTimer = setInterval(function(){
         if(timer <= 0){
           clearInterval(triviaTimer);
@@ -63,6 +97,10 @@ startBtn.addEventListener("click", function() {
 });
 
     function questionOne() {
+        choiceOne.style.display = "block";
+        choiceTwo.style.display = "block";
+        choiceThree.style.display = "block";
+        choiceFour.style.display = "block";
         questionText.textContent = triviaChoice[0].question;
         choiceOne.textContent = triviaChoice[0].choice[0];
         choiceTwo.textContent = triviaChoice[0].choice[1];
@@ -90,26 +128,34 @@ startBtn.addEventListener("click", function() {
     };
 
     function questionTwo() {
+        choiceOne.style.display = "none";
+        choiceTwo.style.display = "none";
+        choiceThree.style.display = "none";
+        choiceFour.style.display = "none";
+        choiceFive.style.display = "block";
+        choiceSix.style.display = "block";
+        choiceSeven.style.display = "block";
+        choiceEight.style.display = "block"; 
         questionText.textContent = triviaChoice[1].question;
-        choiceOne.textContent = triviaChoice[1].choice[0];
-        choiceTwo.textContent = triviaChoice[1].choice[1];
-        choiceThree.textContent = triviaChoice[1].choice[2];
-        choiceFour.textContent = triviaChoice[1].choice[3]; 
-        choiceOne.addEventListener("click", function() {
+        choiceFive.textContent = triviaChoice[1].choice[0];
+        choiceSix.textContent = triviaChoice[1].choice[1];
+        choiceSeven.textContent = triviaChoice[1].choice[2];
+        choiceEight.textContent = triviaChoice[1].choice[3]; 
+        choiceFive.addEventListener("click", function() {
             resultText.textContent = "Correct Answer";
             return questionThree();
         })
-        choiceTwo.addEventListener("click", function() {
+        choiceSix.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return questionThree();
         })
-        choiceThree.addEventListener("click", function() {
+        choiceSeven.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return questionThree();
         })
-        choiceFour.addEventListener("click", function() {
+        choiceEight.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return questionThree();
@@ -117,53 +163,69 @@ startBtn.addEventListener("click", function() {
     };
 
     function questionThree() {
+        choiceFive.style.display = "none";
+        choiceSix.style.display = "none";
+        choiceSeven.style.display = "none";
+        choiceEight.style.display = "none";
+        choiceNine.style.display = "block";
+        choiceTen.style.display = "block";
+        choiceEleven.style.display = "block";
+        choiceTwelve.style.display = "block";
         questionText.textContent = triviaChoice[2].question;
-        choiceOne.textContent = triviaChoice[2].choice[0];
-        choiceTwo.textContent = triviaChoice[2].choice[1];
-        choiceThree.textContent = triviaChoice[2].choice[2];
-        choiceFour.textContent = triviaChoice[2].choice[3]; 
-        choiceOne.addEventListener("click", function() {
+        choiceNine.textContent = triviaChoice[2].choice[0];
+        choiceTen.textContent = triviaChoice[2].choice[1];
+        choiceEleven.textContent = triviaChoice[2].choice[2];
+        choiceTwelve.textContent = triviaChoice[2].choice[3]; 
+        choiceNine.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return questionFour();
         })
-        choiceTwo.addEventListener("click", function() {
+        choiceTen.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return questionFour();
         })
-        choiceThree.addEventListener("click", function() {
+        choiceEleven.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return questionFour();
         })
-        choiceFour.addEventListener("click", function() {
+        choiceTwelve.addEventListener("click", function() {
             resultText.textContent = "Correct Answer";
             return questionFour();
         })
     };
 
     function questionFour() {
+        choiceNine.style.display = "none";
+        choiceTen.style.display = "none";
+        choiceEleven.style.display = "none";
+        choiceTwelve.style.display = "none";
+        choiceThirteen.style.display = "block";
+        choiceFourteen.style.display = "block";
+        choiceFifteen.style.display = "block";
+        choiceSixteen.style.display = "block";
         questionText.textContent = triviaChoice[3].question;
-        choiceOne.textContent = triviaChoice[3].choice[0];
-        choiceTwo.textContent = triviaChoice[3].choice[1];
-        choiceThree.textContent = triviaChoice[3].choice[2];
-        choiceFour.textContent = triviaChoice[3].choice[3]; 
-        choiceOne.addEventListener("click", function() {
+        choiceThirteen.textContent = triviaChoice[3].choice[0];
+        choiceFourteen.textContent = triviaChoice[3].choice[1];
+        choiceFifteen.textContent = triviaChoice[3].choice[2];
+        choiceSixteen.textContent = triviaChoice[3].choice[3]; 
+        choiceThirteen.addEventListener("click", function() {
             resultText.textContent = "Correct Answer";
             return triviaScores();
         })
-        choiceTwo.addEventListener("click", function() {
+        choiceFourteen.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return triviaScores();
         })
-        choiceThree.addEventListener("click", function() {
+        choiceFifteen.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return triviaScores();
         })
-        choiceFour.addEventListener("click", function() {
+        choiceSixteen.addEventListener("click", function() {
             resultText.textContent = "Incorrect Answer";
             timer -= 5;
             return triviaScores();
@@ -172,12 +234,16 @@ startBtn.addEventListener("click", function() {
 
     function triviaScores() {
         secondText.style.display = "none";
-        questionText.style.display = "none";
         choiceOne.style.display = "none";
         choiceTwo.style.display = "none";
         choiceThree.style.display = "none";
         choiceFour.style.display = "none";
         resultText.style.display = "none";
+        choiceThirteen.style.display = "none";
+        choiceFourteen.style.display = "none";
+        choiceFifteen.style.display = "none";
+        choiceSixteen.style.display = "none";
+        questionText.textContent = ('Your Score: '+timer+'');
     };
 
-/* NOW FIGURE OUT HOW TO STOP TIMER AND SAVE TIME LEFT AS THE USERS SCORE */
+/* NOW FIGURE OUT HOW TO SAVE THE USERS SCORE */
