@@ -18,8 +18,9 @@ let choiceSixteen = document.querySelector("#choiceSixteen");
 let questionText = document.querySelector("#questionText");
 let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
+let yourScore = document.querySelector("#yourScore");
+let timeLeft = document.querySelector("#timeLeft");
 let timer = 30;
-let score = 0;
 let triviaChoice = [
     {
         question: "Which pair of characters are used to create an array in Javascript?",
@@ -78,6 +79,8 @@ choiceThirteen.style.display = "none";
 choiceFourteen.style.display = "none";
 choiceFifteen.style.display = "none";
 choiceSixteen.style.display = "none";
+yourScore.style.display = "none";
+timeLeft.style.display = "none";
 
 
 
@@ -86,10 +89,10 @@ startBtn.addEventListener("click", function() {
     let triviaTimer = setInterval(function(){
         if(timer <= 0){
           clearInterval(triviaTimer);
-          document.getElementById("#timeLeft").innerHTML = "Finished";
+          document.getElementById("timeLeft").innerHTML = "Finished";
           return triviaScore();
         } else {
-          document.getElementById("#timeLeft").innerHTML = timer + " seconds remaining";
+          document.getElementById("timeLeft").innerHTML = timer + " seconds remaining";
         }
         timer -= 1;
       }, 1000);
@@ -97,6 +100,7 @@ startBtn.addEventListener("click", function() {
 });
 
     function questionOne() {
+        timeLeft.style.display = "block";
         choiceOne.style.display = "block";
         choiceTwo.style.display = "block";
         choiceThree.style.display = "block";
@@ -243,6 +247,8 @@ startBtn.addEventListener("click", function() {
         choiceFourteen.style.display = "none";
         choiceFifteen.style.display = "none";
         choiceSixteen.style.display = "none";
+        timeLeft.style.display = "none";
+        yourScore.style.display = "block";
         questionText.textContent = ('Your Score: '+timer+'');
     };
 
