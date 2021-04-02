@@ -11,7 +11,7 @@ function renderScores() {
     let score = scores[i];
 
     let li = document.createElement("li");
-    li.textContent = score;
+    li.textContent = score.toUpperCase();
     li.setAttribute("data-index", i);
 
     let button = document.createElement("button");

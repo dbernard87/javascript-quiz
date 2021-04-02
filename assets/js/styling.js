@@ -41,3 +41,4 @@ timeLeft.style.display = "none";
 scoreName.style.display = "none";
 scoreListSaved.style.display = "none";
 playersText.style.display = "none";
+clearHigh.style.display = "none";

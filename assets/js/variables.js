@@ -20,11 +20,12 @@ let resultText = document.querySelector("#resultText");
 let secondText = document.querySelector("#secondText");
 let yourScore = document.querySelector("#yourScore");
 let timeLeft = document.querySelector("#timeLeft");
-let scoreName = document.querySelector("#scoreName")
-let scoreListSaved = document.querySelector("#scoreList")
-let playersText = document.querySelector("#playersText")
-let welcomeSplash = document.querySelector("#welcomeSplash")
-let clockIcon = document.querySelector("#clockIcon")
+let scoreName = document.querySelector("#scoreName");
+let scoreListSaved = document.querySelector("#scoreList");
+let playersText = document.querySelector("#playersText");
+let welcomeSplash = document.querySelector("#welcomeSplash");
+let clockIcon = document.querySelector("#clockIcon");
+let clearHigh = document.querySelector("#clearHigh");
 let timer = 30;
 let triviaChoice = [
     {

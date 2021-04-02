@@ -3,12 +3,21 @@ startBtn.addEventListener("click", function() {
     let triviaTimer = setInterval(function(){
         if(timer <= 0){
           clearInterval(triviaTimer);
-          document.getElementById("timeLeft").textContent = "Times Up! You will receive negative points!";
+            document.getElementById("timeLeft").textContent = "Times Up! Game Over.";
+            choiceFive.style.display = "none";
+            choiceSix.style.display = "none";
+            choiceSeven.style.display = "none";
+            choiceEight.style.display = "none";
+            choiceNine.style.display = "none";
+            choiceTen.style.display = "none";
+            choiceEleven.style.display = "none";
+            choiceTwelve.style.display = "none";
+            return triviaScores();
         } else {
           document.getElementById("timeLeft").textContent = timer + " seconds remaining";
         }
         timer -= 1;
-      }, 1000);
+    }, 1000);
     return questionOne();
 });
 
@@ -167,5 +176,10 @@ function triviaScores() {
     scoreName.style.display = "block";
     scoreListSaved.style.display = "block";
     playersText.style.display = "block";
-    questionText.textContent = ('Score: '+timer+'');
+    questionText.textContent = ('Score:' + timer);
+    clearHigh.style.display = "block";
+    clearHigh.addEventListener("click", function () {
+        document.querySelector("#scoreList").textContent = "";
+        localStorage.clear();
+    })
     };

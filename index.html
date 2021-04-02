@@ -42,12 +42,13 @@
             <p id="resultText"></p>
             <div class="inputDiv">
             <form id="scoreForm" method="POST">
-                <label for="todo-text" id="scoreName">Enter your name:</label>
-                <input type="text" placeholder="Enter your name..." name="todo-text" id="yourScore" />
+                <label for="todo-text" id="scoreName">Enter your initials:</label>
+                <input type="text" placeholder="Enter your initials..." name="todo-text" id="yourScore" maxlength="3"/>
               </form>
             </div>
             <p id="playersText">High Score: <span id="scoreCount">0</span></p>
             <ul id="scoreList"></ul>
+            <button id="clearHigh">Clear High Scores</button>
          </div>
     </main>
 </body>
