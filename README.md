@@ -3,7 +3,7 @@
 
 ## Description
 
-This is a multiple choice quiz based on questions about Javascrip development. Users have four choices per question to choose from, and 30 seconds to answer them all. Users can save their intials and highscore to the leaderboard to see where they compare to their peers.
+This is a multiple choice quiz based on questions about Javascript development. Users have four choices per question to choose from, and 30 seconds to answer them all. Users can save their intials and highscore to the leaderboard to see where they compare to their peers.
 
 
 ## Usage
