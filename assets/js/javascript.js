@@ -12,6 +12,7 @@ startBtn.addEventListener("click", function() {
             choiceTen.style.display = "none";
             choiceEleven.style.display = "none";
             choiceTwelve.style.display = "none";
+            return triviaScores();
         } else {
           document.getElementById("timeLeft").textContent = timer + " seconds remaining";
         }
@@ -20,7 +21,24 @@ startBtn.addEventListener("click", function() {
     return questionOne();
 });
 
+viewHigh.addEventListener("click", function () {
+    startBtn.style.display = "none";
+    viewHigh.style.display = "none";
+    clockIcon.style.display = "none";
+    welcomeSplash.style.display = "none";
+    scoreListSaved.style.display = "block";
+    playersText.style.display = "block";
+    clearHigh.style.display = "block";
+    highScoreSplash.style.display = "block";
+    clearHigh.addEventListener("click", function () {
+        document.querySelector("#scoreList").textContent = "";
+        localStorage.clear();
+    })
+    playAgain.style.display = "block";
+})
+
 function questionOne() {
+    viewHigh.style.display = "none";
     clockIcon.style.display = "none";
     welcomeSplash.style.display = "none";
     timeLeft.style.display = "block";
@@ -173,6 +191,7 @@ function triviaScores() {
     timeLeft.style.display = "none";
     yourScore.style.display = "block";
     scoreName.style.display = "block";
+    submitScore.style.display = "block";
     scoreListSaved.style.display = "block";
     playersText.style.display = "block";
     questionText.textContent = ('Score: ' + timer);
@@ -181,4 +200,9 @@ function triviaScores() {
         document.querySelector("#scoreList").textContent = "";
         localStorage.clear();
     })
-    };
+    playAgain.style.display = "block";
+};
+
+playAgain.addEventListener("click", function () {
+    window.location.reload();
+});

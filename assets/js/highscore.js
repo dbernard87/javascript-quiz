@@ -21,15 +21,6 @@ function renderScores() {
   }
 }
 
-function init() {
-
-  let storedscores = JSON.parse(localStorage.getItem("scores"));
-  if (storedscores !== null) {
-    scores = storedscores;
-  }
-  renderScores();
-}
-
 function storeScores() {
   localStorage.setItem("scores", JSON.stringify(scores));
 }
@@ -57,4 +48,12 @@ scoreList.addEventListener("click", function(event) {
   }
 });
 
+function init() {
+
+  let storedscores = JSON.parse(localStorage.getItem("scores"));
+  if (storedscores !== null) {
+    scores = storedscores;
+  }
+  renderScores();
+}
 init()

@@ -26,6 +26,10 @@ let playersText = document.querySelector("#playersText");
 let welcomeSplash = document.querySelector("#welcomeSplash");
 let clockIcon = document.querySelector("#clockIcon");
 let clearHigh = document.querySelector("#clearHigh");
+let viewHigh = document.querySelector("#viewHigh");
+let playAgain = document.querySelector("#playAgain");
+let submitScore = document.querySelector("#submitScore");
+let highScoreSplash = document.querySelector("#highScoreSplash");
 let timer = 30;
 let triviaChoice = [
     {

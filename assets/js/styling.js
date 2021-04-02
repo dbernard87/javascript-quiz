@@ -42,3 +42,6 @@ scoreName.style.display = "none";
 scoreListSaved.style.display = "none";
 playersText.style.display = "none";
 clearHigh.style.display = "none";
+playAgain.style.display = "none";
+submitScore.style.display = "none";
+highScoreSplash.style.display = "none";
