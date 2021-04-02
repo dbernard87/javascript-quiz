@@ -1,93 +1,3 @@
-let startBtn = document.querySelector(".startBtn");
-let choiceOne = document.querySelector("#choiceOne");
-let choiceTwo = document.querySelector("#choiceTwo");
-let choiceThree = document.querySelector("#choiceThree");
-let choiceFour = document.querySelector("#choiceFour");
-let choiceFive = document.querySelector("#choiceFive");
-let choiceSix = document.querySelector("#choiceSix");
-let choiceSeven = document.querySelector("#choiceSeven");
-let choiceEight = document.querySelector("#choiceEight");
-let choiceNine = document.querySelector("#choiceNine");
-let choiceTen = document.querySelector("#choiceTen");
-let choiceEleven = document.querySelector("#choiceEleven");
-let choiceTwelve = document.querySelector("#choiceTwelve");
-let choiceThirteen = document.querySelector("#choiceThirteen");
-let choiceFourteen = document.querySelector("#choiceFourteen");
-let choiceFifteen = document.querySelector("#choiceFifteen");
-let choiceSixteen = document.querySelector("#choiceSixteen");
-let questionText = document.querySelector("#questionText");
-let resultText = document.querySelector("#resultText");
-let secondText = document.querySelector("#secondText");
-let yourScore = document.querySelector("#yourScore");
-let timeLeft = document.querySelector("#timeLeft");
-let scoreName = document.querySelector("#scoreName")
-let scoreListSaved = document.querySelector("#scoreList")
-let playersText = document.querySelector("#playersText")
-let timer = 30;
-let triviaChoice = [
-    {
-        question: "Which pair of characters are used to create an array in Javascript?",
-        choice: ["< >", "( )", "[ ]", "' '"],
-        answer: "[]",
-    },
-    {
-        question: "Which attribute is used to change font color in Javascript?",
-        choice: ["style", "set", "assign", "change"],
-        answer: "style",
-    },
-    {
-        question: "Which set of characters are used to assign AND to an if else statement?",
-        choice: ["!!", "||", "++", "&&"],
-        answer: "&&",
-    },
-    {
-        question: "Which is the correct way to display myVariable in console?",
-        choice: ["console.log(myVariable)", "console.show(myVariable)", "console.display(myVariable)", "console.write(myVariable)"],
-        answer: "console.log(myVariable)",
-    }
-]; 
-
-startBtn.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceOne.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceTwo.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceThree.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceFour.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceFive.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceSix.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceSeven.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceEight.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceNine.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceTen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceEleven.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceTwelve.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceThirteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceFourteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceFifteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-choiceSixteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
-
-secondText.style.display = "none";
-choiceOne.style.display = "none";
-choiceTwo.style.display = "none";
-choiceThree.style.display = "none";
-choiceFour.style.display = "none";
-choiceFive.style.display = "none";
-choiceSix.style.display = "none";
-choiceSeven.style.display = "none";
-choiceEight.style.display = "none";
-choiceNine.style.display = "none";
-choiceTen.style.display = "none";
-choiceEleven.style.display = "none";
-choiceTwelve.style.display = "none";
-choiceThirteen.style.display = "none";
-choiceFourteen.style.display = "none";
-choiceFifteen.style.display = "none";
-choiceSixteen.style.display = "none";
-yourScore.style.display = "none";
-timeLeft.style.display = "none";
-scoreName.style.display = "none";
-scoreListSaved.style.display = "none";
-playersText.style.display = "none";
-
 startBtn.addEventListener("click", function() {
     startBtn.style.display = "none";
     let triviaTimer = setInterval(function(){
@@ -103,6 +13,8 @@ startBtn.addEventListener("click", function() {
 });
 
 function questionOne() {
+    clockIcon.style.display = "none";
+    welcomeSplash.style.display = "none";
     timeLeft.style.display = "block";
     choiceOne.style.display = "block";
     choiceTwo.style.display = "block";
@@ -255,66 +167,5 @@ function triviaScores() {
     scoreName.style.display = "block";
     scoreListSaved.style.display = "block";
     playersText.style.display = "block";
-    questionText.textContent = ('Your Score: '+timer+'');
+    questionText.textContent = ('Score: '+timer+'');
     };
-
-var scoreInput = document.querySelector("#yourScore");
-var scoreForm = document.querySelector("#scoreForm");
-var scoreList = document.querySelector("#scoreList");
-var scoreCountSpan = document.querySelector("#scoreCount");
-var scores = [];
-
-function renderScores() {
-  scoreList.textContent = "";
-  scoreCountSpan.textContent = scores.length;
-  for (var i = 0; i < scores.length; i++) {
-    var score = scores[i];
-
-    var li = document.createElement("li");
-    li.textContent = score;
-    li.setAttribute("data-index", i);
-
-    var button = document.createElement("button");
-    button.textContent = questionText.textContent;
-    li.appendChild(button);
-    scoreList.appendChild(li);
-  }
-}
-
-function init() {
-
-  var storedscores = JSON.parse(localStorage.getItem("scores"));
-  if (storedscores !== null) {
-    scores = storedscores;
-  }
-  renderScores();
-}
-
-function storeScores() {
-  localStorage.setItem("scores", JSON.stringify(scores));
-}
-
-scoreForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  var scoreText = scoreInput.value.trim();
-  if (scoreText === "") {
-    return;
-  }
-
-  scores.push(scoreText);
-  scoreInput.value = "";
-  storeScores();
-  renderScores();
-});
-
-scoreList.addEventListener("click", function(event) {
-  var element = event.target;
-  if (element.matches("button") === true) {
-    var index = element.parentElement.getAttribute("data-index");
-    scores.splice(index, 1);
-    storeScores();
-    renderScores();
-  }
-});
-
-init()
