@@ -31,7 +31,7 @@ let playAgain = document.querySelector("#playAgain");
 let submitScore = document.querySelector("#submitScore");
 let highScoreSplash = document.querySelector("#highScoreSplash");
 let timer = 30;
-let triviaChoice = [
+let quizChoice = [
     {
         question: "Which pair of characters are used to create an array in Javascript?",
         choice: ["< >", "( )", "[ ]", "' '"]

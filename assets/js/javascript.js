@@ -1,8 +1,8 @@
 startBtn.addEventListener("click", function() {
     startBtn.style.display = "none";
-    let triviaTimer = setInterval(function(){
+    let quizTimer = setInterval(function(){
         if(timer <= 0){
-          clearInterval(triviaTimer);
+          clearInterval(quizTimer);
             document.getElementById("timeLeft").textContent = "Times Up! Game Over.";
             choiceFive.style.display = "none";
             choiceSix.style.display = "none";
@@ -12,7 +12,6 @@ startBtn.addEventListener("click", function() {
             choiceTen.style.display = "none";
             choiceEleven.style.display = "none";
             choiceTwelve.style.display = "none";
-            return triviaScores();
         } else {
           document.getElementById("timeLeft").textContent = timer + " seconds remaining";
         }
@@ -46,11 +45,11 @@ function questionOne() {
     choiceTwo.style.display = "block";
     choiceThree.style.display = "block";
     choiceFour.style.display = "block";
-    questionText.textContent = triviaChoice[0].question;
-    choiceOne.textContent = triviaChoice[0].choice[0];
-    choiceTwo.textContent = triviaChoice[0].choice[1];
-    choiceThree.textContent = triviaChoice[0].choice[2];
-    choiceFour.textContent = triviaChoice[0].choice[3];
+    questionText.textContent = quizChoice[0].question;
+    choiceOne.textContent = quizChoice[0].choice[0];
+    choiceTwo.textContent = quizChoice[0].choice[1];
+    choiceThree.textContent = quizChoice[0].choice[2];
+    choiceFour.textContent = quizChoice[0].choice[3];
     choiceOne.addEventListener("click", function() {
         resultText.textContent = "Incorrect Answer";
         timer -= 5;
@@ -81,11 +80,11 @@ function questionTwo() {
     choiceSix.style.display = "block";
     choiceSeven.style.display = "block";
     choiceEight.style.display = "block"; 
-    questionText.textContent = triviaChoice[1].question;
-    choiceFive.textContent = triviaChoice[1].choice[0];
-    choiceSix.textContent = triviaChoice[1].choice[1];
-    choiceSeven.textContent = triviaChoice[1].choice[2];
-    choiceEight.textContent = triviaChoice[1].choice[3]; 
+    questionText.textContent = quizChoice[1].question;
+    choiceFive.textContent = quizChoice[1].choice[0];
+    choiceSix.textContent = quizChoice[1].choice[1];
+    choiceSeven.textContent = quizChoice[1].choice[2];
+    choiceEight.textContent = quizChoice[1].choice[3]; 
     choiceFive.addEventListener("click", function() {
         resultText.textContent = "Correct Answer";
         return questionThree();
@@ -116,11 +115,11 @@ function questionThree() {
     choiceTen.style.display = "block";
     choiceEleven.style.display = "block";
     choiceTwelve.style.display = "block";
-    questionText.textContent = triviaChoice[2].question;
-    choiceNine.textContent = triviaChoice[2].choice[0];
-    choiceTen.textContent = triviaChoice[2].choice[1];
-    choiceEleven.textContent = triviaChoice[2].choice[2];
-    choiceTwelve.textContent = triviaChoice[2].choice[3]; 
+    questionText.textContent = quizChoice[2].question;
+    choiceNine.textContent = quizChoice[2].choice[0];
+    choiceTen.textContent = quizChoice[2].choice[1];
+    choiceEleven.textContent = quizChoice[2].choice[2];
+    choiceTwelve.textContent = quizChoice[2].choice[3]; 
     choiceNine.addEventListener("click", function() {
         resultText.textContent = "Incorrect Answer";
         timer -= 5;
@@ -151,33 +150,33 @@ function questionFour() {
     choiceFourteen.style.display = "block";
     choiceFifteen.style.display = "block";
     choiceSixteen.style.display = "block";
-    questionText.textContent = triviaChoice[3].question;
-    choiceThirteen.textContent = triviaChoice[3].choice[0];
-    choiceFourteen.textContent = triviaChoice[3].choice[1];
-    choiceFifteen.textContent = triviaChoice[3].choice[2];
-    choiceSixteen.textContent = triviaChoice[3].choice[3]; 
+    questionText.textContent = quizChoice[3].question;
+    choiceThirteen.textContent = quizChoice[3].choice[0];
+    choiceFourteen.textContent = quizChoice[3].choice[1];
+    choiceFifteen.textContent = quizChoice[3].choice[2];
+    choiceSixteen.textContent = quizChoice[3].choice[3]; 
     choiceThirteen.addEventListener("click", function() {
         resultText.textContent = "Correct Answer";
-        return triviaScores();
+        return quizScores();
     })
     choiceFourteen.addEventListener("click", function() {
         resultText.textContent = "Incorrect Answer";
         timer -= 5;
-        return triviaScores();
+        return quizScores();
     })
     choiceFifteen.addEventListener("click", function() {
         resultText.textContent = "Incorrect Answer";
         timer -= 5;
-        return triviaScores();
+        return quizScores();
     })
     choiceSixteen.addEventListener("click", function() {
         resultText.textContent = "Incorrect Answer";
         timer -= 5;
-        return triviaScores();
+        return quizScores();
     })
 };
 
-function triviaScores() {
+function quizScores() {
     secondText.style.display = "none";
     choiceOne.style.display = "none";
     choiceTwo.style.display = "none";
