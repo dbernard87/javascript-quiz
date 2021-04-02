@@ -1,3 +1,4 @@
+/* ------------ Button Style Settings ------------- */
 timeLeft.setAttribute("style", "color: whitesmoke; font-size: 1.5em");
 questionText.setAttribute("style", "color: whitesmoke; font-size: 1.5em");
 resultText.setAttribute("style", "color: whitesmoke; font-size: 1.5em");
@@ -19,6 +20,7 @@ choiceFourteen.setAttribute("style", "padding: 10px 20px; color:blue; background
 choiceFifteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 choiceSixteen.setAttribute("style", "padding: 10px 20px; color:blue; background-color:coral; color:whitesmoke; border-radius:5px");
 
+/* ------------ Element Display Settings ------------- */
 secondText.style.display = "none";
 choiceOne.style.display = "none";
 choiceTwo.style.display = "none";

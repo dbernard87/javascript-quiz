@@ -1,3 +1,4 @@
+/* ------------ Global Variables ------------- */
 let startBtn = document.querySelector(".startBtn");
 let choiceOne = document.querySelector("#choiceOne");
 let choiceTwo = document.querySelector("#choiceTwo");

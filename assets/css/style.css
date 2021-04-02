@@ -1,3 +1,4 @@
+/* ------------ Global Settings ------------- */
 body {
     display: flex;
     flex-direction: column;
@@ -16,6 +17,7 @@ h2 {
     margin-bottom: -100px;
 }
 
+/* ------------ Submit Score Settings ------------- */
 #submitScore {
     padding: 10px;
     border-radius: 5px;
@@ -42,6 +44,8 @@ button {
     font-size: 1em;
 }
 
+/* ------------ Highscore List Settings ------------- */
+
 li {
     font-size: 1.5em;
     margin-top: 10px;
@@ -57,11 +61,13 @@ li {
     border-radius: 5px;
 }
 
+/* ------------ firstDiv Settings ------------- */
 .firstDiv {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+/* ------------ secondDiv Settings ------------- */
 .secondDiv {
     display: flex;
     flex-direction: column;
@@ -103,6 +109,8 @@ li {
     justify-content: center;
     width: 100%;
 }
+
+/* ------------ Highscore List Settings ------------- */
 
 li {
     list-style: none;

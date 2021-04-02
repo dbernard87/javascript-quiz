@@ -1,5 +1,7 @@
+/*------------- Start Javascript Quiz Event Listener --------------*/
 startBtn.addEventListener("click", function() {
     startBtn.style.display = "none";
+    /*------------- Question Timer Function --------------*/
     let quizTimer = setInterval(function(){
         if(timer <= 0){
           clearInterval(quizTimer);
@@ -20,6 +22,7 @@ startBtn.addEventListener("click", function() {
     return questionOne();
 });
 
+/*------------- View Highscores Event Listener --------------*/
 viewHigh.addEventListener("click", function () {
     startBtn.style.display = "none";
     viewHigh.style.display = "none";
@@ -36,6 +39,7 @@ viewHigh.addEventListener("click", function () {
     playAgain.style.display = "block";
 })
 
+/*------------- Question #1 Function --------------*/
 function questionOne() {
     viewHigh.style.display = "none";
     clockIcon.style.display = "none";
@@ -51,12 +55,12 @@ function questionOne() {
     choiceThree.textContent = quizChoice[0].choice[2];
     choiceFour.textContent = quizChoice[0].choice[3];
     choiceOne.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionTwo();
     })
     choiceTwo.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionTwo();
     })
@@ -65,12 +69,13 @@ function questionOne() {
         return questionTwo();
     })
     choiceFour.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionTwo();
     })
 };
 
+/*------------- Question #2 Function --------------*/
 function questionTwo() {
     choiceOne.style.display = "none";
     choiceTwo.style.display = "none";
@@ -90,22 +95,23 @@ function questionTwo() {
         return questionThree();
     })
     choiceSix.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionThree();
     })
     choiceSeven.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionThree();
     })
     choiceEight.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionThree();
     })
 };
 
+/*------------- Question #3 Function --------------*/
 function questionThree() {
     choiceFive.style.display = "none";
     choiceSix.style.display = "none";
@@ -121,17 +127,17 @@ function questionThree() {
     choiceEleven.textContent = quizChoice[2].choice[2];
     choiceTwelve.textContent = quizChoice[2].choice[3]; 
     choiceNine.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionFour();
     })
     choiceTen.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionFour();
     })
     choiceEleven.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return questionFour();
     })
@@ -141,6 +147,7 @@ function questionThree() {
     })
 };
 
+/*------------- Question #4 Function --------------*/
 function questionFour() {
     choiceNine.style.display = "none";
     choiceTen.style.display = "none";
@@ -160,22 +167,23 @@ function questionFour() {
         return quizScores();
     })
     choiceFourteen.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return quizScores();
     })
     choiceFifteen.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return quizScores();
     })
     choiceSixteen.addEventListener("click", function() {
-        resultText.textContent = "Incorrect Answer";
+        resultText.textContent = "Incorrect answer, -5 seconds.";
         timer -= 5;
         return quizScores();
     })
 };
 
+/*------------- Quiz Highscore Function For Display Settings And Event Listener --------------*/
 function quizScores() {
     secondText.style.display = "none";
     choiceOne.style.display = "none";

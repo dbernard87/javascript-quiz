@@ -1,9 +1,11 @@
+/* --------- Highscore Variables ---------- */
 let scoreInput = document.querySelector("#yourScore");
 let scoreForm = document.querySelector("#scoreForm");
 let scoreList = document.querySelector("#scoreList");
 let scoreCountSpan = document.querySelector("#scoreCount");
 let scores = [];
 
+/* --------- Highscore renderScore Function ---------- */
 function renderScores() {
   scoreList.textContent = "";
   scoreCountSpan.textContent = scores.length;
@@ -21,6 +23,7 @@ function renderScores() {
   }
 }
 
+/* --------- Highscore storeScore Function ---------- */
 function storeScores() {
   localStorage.setItem("scores", JSON.stringify(scores));
 }
@@ -48,6 +51,7 @@ scoreList.addEventListener("click", function(event) {
   }
 });
 
+/* --------- Highscore Initiate Function ---------- */
 function init() {
 
   let storedscores = JSON.parse(localStorage.getItem("scores"));
