@@ -12,7 +12,6 @@ startBtn.addEventListener("click", function() {
             choiceTen.style.display = "none";
             choiceEleven.style.display = "none";
             choiceTwelve.style.display = "none";
-            return triviaScores();
         } else {
           document.getElementById("timeLeft").textContent = timer + " seconds remaining";
         }
@@ -176,7 +175,7 @@ function triviaScores() {
     scoreName.style.display = "block";
     scoreListSaved.style.display = "block";
     playersText.style.display = "block";
-    questionText.textContent = ('Score:' + timer);
+    questionText.textContent = ('Score: ' + timer);
     clearHigh.style.display = "block";
     clearHigh.addEventListener("click", function () {
         document.querySelector("#scoreList").textContent = "";
