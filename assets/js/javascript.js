@@ -6,6 +6,10 @@ startBtn.addEventListener("click", function() {
         if(timer <= 0){
           clearInterval(quizTimer);
             document.getElementById("timeLeft").textContent = "Times Up! Game Over.";
+            choiceOne.style.display = "none";
+            choiceTwo.style.display = "none";
+            choiceThree.style.display = "none";
+            choiceFour.style.display = "none";
             choiceFive.style.display = "none";
             choiceSix.style.display = "none";
             choiceSeven.style.display = "none";
@@ -14,6 +18,12 @@ startBtn.addEventListener("click", function() {
             choiceTen.style.display = "none";
             choiceEleven.style.display = "none";
             choiceTwelve.style.display = "none";
+            choiceThirteen.style.display = "none";
+            choiceFourteen.style.display = "none";
+            choiceFifteen.style.display = "none";
+            choiceSixteen.style.display = "none";
+            resultText.style.display = "none";
+            playAgain.style.display = "block";
         } else {
           document.getElementById("timeLeft").textContent = timer + " seconds remaining";
         }
