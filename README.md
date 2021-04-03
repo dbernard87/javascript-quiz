@@ -12,7 +12,7 @@ To start the quiz, click the "Start Javascript Quiz" button.
 
 You will begin a series of questions with four possible answers. If you choose the correct answer, you will move onto the next question without a time penalty. If you choose the wrong answer, you will be given a 5 second time penalty. If the timer reaches zero before you have answered all the questions, then the game will be over. Once complete you will be asked to enter your intials to save your score on the leaderboard. 
 
-You can click the "Start Javascript Quiz" button on the leaderboard screen to retake the quiz if you choose. You may also view the highscore leaderboards before beginning by clicking the "View Highscores" button.
+You can click the "Take Quiz Again" button on the leaderboard screen to retake the quiz if you choose. You may also view the highscore leaderboards before beginning by clicking the "View Highscores" button.
 
 [https://dbernard87.github.io/javascript-quiz/]
 
